@@ -1,0 +1,103 @@
+/* Importação da Fonte Digital */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+/* Fundo Escuro para Redução de Fadiga Visual */
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+header {
+    background-color: #0d0d0d;
+    border-bottom: 2px solid #2d2d2d;
+}
+
+footer {
+    background-color: #0d0d0d;
+    border-top: 1px solid #2d2d2d;
+    color: #555 ;
+}
+
+/* Customização dos Painéis (Cards) */
+.card {
+    background-color: #242424 ;
+    border: 1px solid #383838 ;
+    color: #ffffff;
+}
+
+.card-header {
+    background-color: #1f1f1f ;
+    border-bottom: 1px solid #383838 ;
+    color: #a0a0a0 ;
+}
+
+.status-container {
+    background-color: #141414;
+    border: 1px solid #2d2d2d;
+}
+
+/* Fonte Digital (LED/Painel de Controle) */
+.font-digital {
+    font-family: 'Orbitron', monospace ;
+    letter-spacing: 1px;
+}
+
+/* Animações e Transições Suaves */
+.transition-all {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#cardIndicador, #txtPressao, #alertaSeguranca {
+    transition: all 0.5s ease-in-out;
+}
+
+/* Customização Base dos Alertas do Supervisório */
+.alert {
+    background-color: #1a1a1a ;
+    color: #ffffff ;
+    border: 1px solid #333;
+}
+
+
+/* --- ESTADO ONLINE / SUCESSO (Verde Operacional) --- */
+.estado-sucesso {
+    border-left-color: #00ff66 ;
+    box-shadow: inset 0 0 20px rgba(0, 255, 102, 0.03);
+}
+
+/* Efeito de Brilho (Glow) Verde */
+.glow-verde {
+    color: #00ff66 ;
+    text-shadow: 0 0 12px rgba(0, 255, 102, 0.8), 
+                 0 0 25px rgba(0, 255, 102, 0.4);
+}
+
+.alert-success { 
+    border-color: #00ff66 ; 
+}
+
+
+/* --- ESTADO FALHA / PERIGO (Vermelho de Emergência) --- */
+.estado-perigo {
+    border-left-color: #ff3333 ;
+    animation: pulsoAlertaIndustrial 2s infinite;
+}
+
+/* Efeito de Brilho (Glow) Vermelho */
+.glow-vermelho {
+    color: #ff3333 ;
+    text-shadow: 0 0 12px rgba(255, 51, 51, 0.8), 
+                 0 0 25px rgba(255, 51, 51, 0.4);
+}
+
+.alert-danger { 
+    border-color: #ff3333 ; 
+}
+
+/* Animação do Indicador Lateral de Falha */
+@keyframes pulsoAlertaIndustrial {
+    0% { border-left-color: #ff3333; box-shadow: inset 0 0 10px rgba(255, 51, 51, 0.05); }
+    50% { border-left-color: #550000; box-shadow: 0 0 15px rgba(255, 51, 51, 0.2); }
+    100% { border-left-color: #ff3333; box-shadow: inset 0 0 10px rgba(255, 51, 51, 0.05); }
+}
